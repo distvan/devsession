@@ -62,7 +62,7 @@ final class SessionRepository implements SessionRepositoryInterface
         }
 
         usort(
-            $sessions, 
+            $sessions,
             fn (Session $a, Session $b) => $b->endedAt <=> $a->endedAt
         );
 
@@ -115,10 +115,10 @@ final class SessionRepository implements SessionRepositoryInterface
         return new Session(
             id: $data['id'],
             title: $data['title'],
-            startedAt: new \DateTimeImmutable($data['startedAt']),
+            startedAt: new DateTimeImmutable($data['startedAt']),
             gitRepo: $data['gitRepo'] ?? null,
             gitBranch: $data['gitBranch'] ?? null,
-            endedAt: isset($data['endedAt']) ? new \DateTimeImmutable($data['endedAt']) : null,
+            endedAt: isset($data['endedAt']) ? new DateTimeImmutable($data['endedAt']) : null,
             commits: $data['commits'] ?? [],
             filesChanges: $data['filesChanges'] ?? []
         );
