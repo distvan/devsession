@@ -1,0 +1,25 @@
+{
+    "name": "devsession/devsession",
+    "description": "",
+    "authors": [
+        {
+            "name": "Istvan Dobrentei",
+            "email": "info@dobrenteiistvan.hu",
+            "homepage": "https://www.en.dobrenteiistvan.hu",
+            "role": "Software Engineer"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "DevSession\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "DevSession\\Tests\\": "tests/"
+        }
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^11.5"
+    }
+}
